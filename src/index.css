@@ -1,0 +1,27 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+body{
+  /* background: #ecf0f1; */
+  background: url('https://wallpaperaccess.com/full/3667709.jpg') fixed center no-repeat;
+  background-size: cover;
+}
+:root{
+  --color: #F79F1F;
+}
+::selection{
+  background: #ffa502;
+}
+::-webkit-scrollbar{
+  width: 5px;
+  background: linear-gradient(to bottom, #2ed573, #ffa502);
+}
+::-webkit-scrollbar-thumb{
+  background: #ff4757;
+  border-radius: 20px;
+}

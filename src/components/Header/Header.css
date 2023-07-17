@@ -1,0 +1,94 @@
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    background: #FFC312;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+    z-index: 9999999;
+    transition: .5s ease-in-out;
+    position: sticky;
+    top: 0;
+}
+.header_2{
+    /* transform: translateY(0); */
+    position: sticky;
+    top: 0;
+    /* transition: 1s ease-in-out; */
+}
+header .logo{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+}
+header nav{
+    display: flex;
+}
+header nav li{
+    margin: 0 15px;
+    position: relative;
+    border-radius: 10px;
+}
+header nav li::before{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: #6ab04c;
+    pointer-events: none;
+    transition: .3s ease-in-out;
+}
+header li a{
+    display: block;
+    color: ghostwhite;
+    font-size: 27px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-family: sans-serif;
+    transition: .2s ease-in-out;
+}
+header nav li a.active{
+    background: #6ab04c;
+    /* border-bottom: 5px solid #6ab04c; */
+}
+header nav>li:hover::before{
+    transform: scaleX(1) skewX(-60deg);
+}
+header nav ul li:hover{
+    background: #6ab04c;
+}
+header nav ul{
+    position: absolute;
+    width: 350px;
+    left: 0;
+    padding-top: 30px;
+    visibility: hidden;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: .3s ease-in-out;
+}
+header nav ul li{
+    margin: 0;
+    border-radius: 0;
+    background: #FFC312;
+}
+header nav ul li a{
+    border-radius: 0;
+    font-size: 30px;
+}
+header nav ul li:nth-child(1){
+    border-top: 7px solid #6ab04c;
+}
+header li:hover>ul{
+    visibility: visible;
+    opacity: 1;
+    transform: scaleY(1);
+}
